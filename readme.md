@@ -61,6 +61,10 @@ cd task-tracker
     python taskmgr.py list --filter "status"
 ```
 - `status` : str : optional (done,todo,in-progress)
+#### 5. Remove all tasks:
+```bash
+    python taskmgr.py clear
+```
 
 ## Version Info :
 

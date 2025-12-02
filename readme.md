@@ -4,7 +4,7 @@ Solution for the [task-tracker](https://roadmap.sh/projects/task-tracker) challe
 ## How to run
 Clone the repository and run the following command:
 ```bash
-git clone https://github.com/Abhinav08bhatt/taskmgr
+git clone https://github.com/Abhinav08bhatt/taskmgr.git
 cd task-tracker
 ```
 
@@ -13,17 +13,17 @@ cd task-tracker
 #### 1. Add a task :
 - Base command :
 ```bash
-    python taskmgr.py add "title"
+python taskmgr.py add "title"
 ```
 - Other commands :
 ```bash
-    python taskmgr.py add "title" --status "status"
+python taskmgr.py add "title" --status "status"
 ```
 ```bash
-    python taskmgr.py add "title" --priority "priority"
+python taskmgr.py add "title" --priority "priority"
 ```
 ```bash
-    python taskmgr.py add "title" --status "status" --priority "priority"
+python taskmgr.py add "title" --status "status" --priority "priority"
 ```
 - `title` : str : positional
 - `status` : str : optional (done,todo,in-progress)
@@ -31,17 +31,17 @@ cd task-tracker
 
 #### 2. Update a task:
 ```bash
-    python taskmgr.py update task_id "new_title"
+python taskmgr.py update task_id "new_title"
 ```
 - Other commands :
 ```bash
-    python taskmgr.py update task_id --status "status"
+python taskmgr.py update task_id --status "status"
 ```
 ```bash
-    python taskmgr.py update task_id --priority "priority"
+python taskmgr.py update task_id --priority "priority"
 ``` 
 ```bash
-    python taskmgr.py update task_id "new_title --status "status" --priority "priority"
+python taskmgr.py update task_id "new_title --status "status" --priority "priority"
 ```
 - `task_id` : int : positional
 - `new_title` : str : positional
@@ -49,21 +49,21 @@ cd task-tracker
 - `priority` : str : optional (low,normal,important)
 #### 3. Delete a task:
 ```bash
-    python taskmgr.py delete task_id
+python taskmgr.py delete task_id
 ```
 - `task_id` : int : positional
 #### 4. List all task:
 ```bash
-    python taskmgr.py list
+python taskmgr.py list
 ```
 - Other commands :
 ```bash
-    python taskmgr.py list --filter "status"
+python taskmgr.py list --filter "status"
 ```
 - `status` : str : optional (done,todo,in-progress)
 #### 5. Remove all tasks:
 ```bash
-    python taskmgr.py clear
+python taskmgr.py clear
 ```
 
 ## Version Info :
@@ -108,11 +108,11 @@ cd task-tracker
 #### Required module : `rich`
 - Windows , Linux , Mac
 ```bash
-    pip install rich
+pip install rich
 ```
 - Arch
 ```
-    sudo pacman -S python-rich
+sudo pacman -S python-rich
 ```        
 
 #### What's new?

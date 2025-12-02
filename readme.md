@@ -131,15 +131,11 @@ cd task-tracker
 - Update a task (`update`)
 - Delete a task (`delete`)
 - List tasks (`list`)
-- Deletes all tasks (`delete`)
+- Deletes all tasks (`clear`)
 - Mark a task as: (`--status`) 
     - todo (default)
     - done 
     - in-progress
-- Priorities a task as: (`--priority`)
-    - low
-    - normal (default)
-    - important
 - List tasks filtered by: (`--filter`)
     - todo
     - done

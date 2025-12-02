@@ -1,69 +1,13 @@
 # `taskmgr.py`
 Solution for the [task-tracker](https://roadmap.sh/projects/task-tracker) challenge from [roadmap.sh](https://roadmap.sh).
 
+![Demo](demo.gif)
+
 ## How to run
 Clone the repository and run the following command:
 ```bash
 git clone https://github.com/Abhinav08bhatt/taskmgr.git
 cd task-tracker
-```
-
-## CLI commands :
-
-#### 1. Add a task :
-- Base command :
-```bash
-python taskmgr.py add "title"
-```
-- Other commands :
-```bash
-python taskmgr.py add "title" --status "status"
-```
-```bash
-python taskmgr.py add "title" --priority "priority"
-```
-```bash
-python taskmgr.py add "title" --status "status" --priority "priority"
-```
-- `title` : str : positional
-- `status` : str : optional (done,todo,in-progress)
-- `priority` : str : optional (low,normal,important)
-
-#### 2. Update a task:
-```bash
-python taskmgr.py update task_id "new_title"
-```
-- Other commands :
-```bash
-python taskmgr.py update task_id --status "status"
-```
-```bash
-python taskmgr.py update task_id --priority "priority"
-``` 
-```bash
-python taskmgr.py update task_id "new_title --status "status" --priority "priority"
-```
-- `task_id` : int : positional
-- `new_title` : str : positional
-- `status` : str : optional (done,todo,in-progress)
-- `priority` : str : optional (low,normal,important)
-#### 3. Delete a task:
-```bash
-python taskmgr.py delete task_id
-```
-- `task_id` : int : positional
-#### 4. List all task:
-```bash
-python taskmgr.py list
-```
-- Other commands :
-```bash
-python taskmgr.py list --filter "status"
-```
-- `status` : str : optional (done,todo,in-progress)
-#### 5. Remove all tasks:
-```bash
-python taskmgr.py clear
 ```
 
 ## Version Info :
@@ -150,5 +94,102 @@ sudo pacman -S python-rich
 | 2  | Learn Python      | in-progress  | important |
 | 3  | Clean room        | done         | low       |
 +----+-------------------+--------------+-----------+
+```
+</details>
+
+## CLI commands :
+
+#### 1. Add a task :
+- Base command :
+```bash
+python taskmgr.py add "title"
+```
+- Other commands :
+```bash
+python taskmgr.py add "title" --status "status"
+```
+```bash
+python taskmgr.py add "title" --priority "priority"
+```
+```bash
+python taskmgr.py add "title" --status "status" --priority "priority"
+```
+- `title` : str : positional
+- `status` : str : optional (done,todo,in-progress)
+- `priority` : str : optional (low,normal,important)
+
+#### 2. Update a task:
+```bash
+python taskmgr.py update task_id "new_title"
+```
+- Other commands :
+```bash
+python taskmgr.py update task_id --status "status"
+```
+```bash
+python taskmgr.py update task_id --priority "priority"
+``` 
+```bash
+python taskmgr.py update task_id "new_title --status "status" --priority "priority"
+```
+- `task_id` : int : positional
+- `new_title` : str : positional
+- `status` : str : optional (done,todo,in-progress)
+- `priority` : str : optional (low,normal,important)
+#### 3. Delete a task:
+```bash
+python taskmgr.py delete task_id
+```
+- `task_id` : int : positional
+#### 4. List all task:
+```bash
+python taskmgr.py list
+```
+- Other commands :
+```bash
+python taskmgr.py list --filter "status"
+```
+- `status` : str : optional (done,todo,in-progress)
+#### 5. Remove all tasks:
+```bash
+python taskmgr.py clear
+```
+
+---
+
+<details><summary>Note to self!</summary>
+
+Recording screen and creating a average quality gif was hard for me :)
+- Install wf-recorder
+```bash
+sudo pacman -S wf-recorder
+```
+- Start recording
+```bash
+wf-recorder -f demo.mp4
+```
+- Stop recording
+```
+CTRL + C
+```
+- Install gifski (AUR)
+```bash
+yay -S gifski
+```
+- Make a folder to hold extracted frames
+```bash
+mkdir frames
+```
+- Use ffmpeg to extract frames from demo.mp4
+```bash
+ffmpeg -i demo.mp4 -vf fps=15,scale=640:-1 frames/frame%04d.png
+```
+- Convert the extracted PNG frames into a GIF
+```bash
+gifski frames/*.png -o demo.gif
+```
+- Remove frames after GIF is created
+```bash
+rm -r frames
 ```
 </details>

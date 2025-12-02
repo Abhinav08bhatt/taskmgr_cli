@@ -115,7 +115,7 @@ cd task-tracker
 
 - ##### Features added :
     - We can prioritize a task. (low,normal,important)
-    - We can filter the tasks based on their priority.
+    - We can now clear all the tasks with a command.
     - The table format now looks beautiful. (cross-platform)
         - thanks to `rich` library in python
 
@@ -127,6 +127,7 @@ cd task-tracker
 - Update a task (`update`)
 - Delete a task (`delete`)
 - List tasks (`list`)
+- Deletes all tasks (`delete`)
 - Mark a task as: (`--status`) 
     - todo (default)
     - done 
@@ -139,9 +140,6 @@ cd task-tracker
     - todo
     - done
     - in-progress
-    - low 
-    - normal
-    - important
 
 #### Data Structure used in version 2.0: (`sqlite`)
 ```sql

@@ -303,5 +303,6 @@ elif args.command == "clear":
     if sure == "y":
         clear()
         clear_all_tasks()
-    print(">>> Task not erased.\n\n")
+    else:
+        print(">>> Task not erased.\n\n")
     list_tasks()

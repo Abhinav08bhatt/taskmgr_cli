@@ -6,10 +6,10 @@ Solution for the [task-tracker](https://roadmap.sh/projects/task-tracker) challe
 ## How to run
 Clone the repository and run the following command:
 ```bash
-git clone https://github.com/Abhinav08bhatt/taskmgr.git
+git clone https://github.com/Abhinav08bhatt/taskmgr_cli.git
 ```
 ```bash
-cd task-tracker
+cd taskmgr_cli
 ```
 
 ## Version Info :
